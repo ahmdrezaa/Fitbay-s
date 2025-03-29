@@ -1,0 +1,142 @@
+body {
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.hero img {
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #000;
+    color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Pastikan navigasi tetap di tengah */
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 50px;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3 ease;
+}
+
+nav ul li a:hover {
+    color: #f8b66b;
+}
+
+.info_blog-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.category-tag {
+    display: inline-block;
+    background-color: #f8b66b;
+    color: white;
+    border-radius: 10px;
+    padding: 5px 10px; /* Tambahkan padding agar kotak terlihat */
+    font-weight: bold; /* Opsional, untuk menonjolkan teks */
+    margin-bottom: 10px; /* Jaga jarak dari elemen lain */
+}
+
+.post {
+    padding: 20px;
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: justify;
+}
+
+.category-tag {
+    background-color: #f8b66b; /* Warna latar (sesuaikan sesuai tema) */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 5px 10px; /* Tambah padding supaya lebih rapi */
+    display: inline-block; /* Agar kotaknya hanya mengikuti teks */
+    border-radius: 5px; /* Opsional: buat sudut membulat */
+}
+
+.footer {
+    background-color: black; /* Warna background */
+    padding: 30px 5%; /* Ruang dalam */
+    border-top: 1px solid white;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between; /* Biar semua elemen tersebar merata */
+    flex-wrap: wrap; /* Biar responsif di layar kecil */
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 80px; /* Atur tinggi logo */
+}
+
+.footer-section {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-section a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 20px;
+    
+}
+
+.footer-section a:hover {
+    color: #f8b66b; /* Warna hover */
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
