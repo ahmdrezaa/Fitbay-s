@@ -1,0 +1,225 @@
+/* GENERAL STYLES */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: white;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #000;
+    color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 50px;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav {
+    display: flex;
+    justify-content: center; /* Pastikan navigasi tetap di tengah */
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 50px;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3 ease;
+}
+
+nav ul li a:hover {
+    color: #f8b66b;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .site-header nav {
+        margin-top: 10px;
+    }
+
+    .site-header nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.hero {
+    background: url('Images/pngtree-dark-gym-where-you-can-take-in-the-surrounding-light-picture-image_2611114.jpg') no-repeat center center/cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5px;
+    padding: 20px;
+    justify-content: space-between; 
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.blog-post {
+    display: flex;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+}
+
+.post {
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 10px);
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.post-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    margin-top: 0px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: #F8B66B;
+    margin-top: auto;
+}
+
+.btn:hover {
+    background: orange;
+    color: black;
+}
+
+
+
+.sidebar {
+    width: 30%;
+    background: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.recent-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recent-image {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.recent-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.recent-text p {
+    margin: 0;
+}
+
+
+.footer {
+    background-color: black; /* Warna background */
+    padding: 30px 5%; /* Ruang dalam */
+    border-top: 1px solid white;
+}
+
+.footer-content {
+    display: flex;
+    align-items: flex-start; 
+    justify-content: space-between; /* Biar semua elemen tersebar merata */
+    flex-wrap: wrap; /* Biar responsif di layar kecil */
+    width: 100%;
+}
+
+.footer-logo img {
+    height: 80px; /* Atur tinggi logo */
+}
+
+.footer-section {
+    text-align: center;
+    flex: 1;
+}
+
+.footer-section h3 {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-section a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 20px;
+    
+}
+
+.footer-section a:hover {
+    color: #f8b66b; /* Warna hover */
+}
+
+.social-icons i {
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
