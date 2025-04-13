@@ -1,0 +1,130 @@
+:root {
+  --primary: #f8b66b;
+  --bg: #010100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 2%;
+  background-color: #010100;
+  border-bottom: 1px solid white;
+  position: relative;
+}
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #111;
+  height: 100vh;
+  box-sizing: border-box;
+  border-right: 1px solid white;
+  font-weight: bold;
+}
+
+.sidebar img {
+  width: 50px;
+  height: auto;
+  padding-right: 10px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  color: white;
+  text-decoration: none;
+  margin: 12px 0;
+}
+
+.sidebar a.active {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.sidebar a.border {
+  border-bottom: 1px solid white;
+}
+
+.sidebar a:hover:not(.active) {
+  text-decoration: none;
+}
+
+.main {
+  flex: 1;
+  padding: 30px;
+  background-color: #0e0e0e;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid white;
+}
+
+th {
+  color: var(--primary);
+}
+
+.email {
+  color: white;
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #f7a74d;
+}
+
+.delete {
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.centang {
+  color: var(--primary);
+  cursor: pointer;
+}

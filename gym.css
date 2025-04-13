@@ -1,0 +1,141 @@
+:root {
+  --primary: #f8b66b;
+  --bg: #010100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 2%;
+  background-color: #010100;
+  border-bottom: 1px solid white;
+  position: relative;
+}
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #111;
+  height: 100vh;
+  box-sizing: border-box;
+  border-right: 1px solid white;
+  font-weight: bold;
+}
+
+.sidebar img {
+  width: 50px;
+  height: auto;
+  padding-right: 10px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  padding: 10px 5px;
+  color: white;
+  text-decoration: none;
+  margin: 12px 0;
+}
+
+.sidebar a.active {
+  background-color: var(--primary);
+  color: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.sidebar a.border {
+  border-bottom: 1px solid white;
+}
+
+.sidebar a:hover:not(.active) {
+  text-decoration: none;
+}
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  background-color: #d3d3d3;
+  height: 120px;
+}
+
+.card-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #010100;
+}
+
+.card-content p {
+  margin: 4px 0 12px;
+  color: #333;
+  font-size: 14px;
+}
+
+.edit-btn {
+  background-color: #f9b567;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.fab {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #f9b567;
+  color: white;
+  font-size: 30px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
