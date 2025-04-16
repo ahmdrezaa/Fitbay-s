@@ -1,0 +1,387 @@
+:root {
+  --primary: #f8b66b;
+  --bg: #010100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 2%;
+  background-color: #010100;
+  border-bottom: 1px solid #010100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-left: 58px;
+  white-space: nowrap;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1.15rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+.gym-header {
+  width: 100%;
+  height: 500px; /* Sesuaikan tinggi sesuai kebutuhan */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Biar gambar nggak keluar batas */
+}
+
+.header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gambar tetap bagus tanpa melar */
+}
+
+.gym-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.gym-title {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Layout untuk 3 gambar sejajar */
+.gym-images {
+  display: flex;
+  justify-content: center;
+  gap: 100px; /* Jarak antar gambar */
+}
+
+.gym-img {
+  width: 30%; /* Setiap gambar 30% supaya muat bertiga */
+  max-width: 300px; /* Batasi ukuran maksimal */
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.gym-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  justify-content: center;
+  display: flex;
+}
+
+.fasilitas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fasilitas-item {
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.fasilitas-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.fasilitas-item p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+
+/* Lokasi Section */
+.location-section {
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.location-title {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.location-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.location-map img {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.location-gambar .location-image {
+  width: 95%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.location-details {
+  text-align: left;
+  color: white;
+  font-size: xx-large;
+  justify-content: center;
+}
+.hidden {
+  display: none;
+}
+
+.location-map {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  width: 0.6rem;
+  margin-right: 4rem;
+}
+
+.location-map img {
+  height: 7rem;
+}
+
+.harga {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 70px;
+  padding-top: 10px;
+}
+
+.btn-harga {
+  background: black;
+  color: white;
+  border: 1px solid var(--primary);
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 30px;
+  width: 13rem;
+  font-size: larger;
+}
+
+.btn-harga:hover {
+  background: var(--primary);
+}
+
+.hargatulisan {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#pembayaran,
+#statusPembayaran {
+  background: white;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.payment-status {
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+  width: 64%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.statuspem {
+  margin-bottom: 10px;
+  text-align: left;
+  color: white;
+  font-size: x-large;
+  margin-top: 40px;
+  white-space: nowrap;
+}
+
+.payment-details {
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: none;
+  width: 63%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.payment-details h3,
+.payment-details p {
+  text-align: center;
+}
+
+.payment-details h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.payment-methods {
+  list-style: none;
+  padding: 0;
+}
+
+.payment-methods li {
+  margin: 5px 0;
+}
+
+.pay-btn {
+  background: var(--primary);
+  display: block;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 5rem;
+  font-weight: bolder;
+}
+
+.pay-btn:hover {
+  background: orange;
+}
+
+.status-box {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.status-box img {
+  width: 20rem;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  position: relative;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: auto;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.footer-sections {
+  display: flex;
+  gap: 50px;
+}
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+.footer-section a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.footer-section a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+.social-icons img {
+  width: 100px;
+  height: 90px;
+}
