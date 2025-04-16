@@ -1,0 +1,135 @@
+:root {
+    --primary: #f8b66b;
+    --bg: #010100;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 2%;
+    background-color: #010100;
+    border-bottom: 1px solid white;
+    position: relative;
+  }
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #111;
+    height: 100vh;
+    box-sizing: border-box;
+    border-right: 1px solid white;
+    font-weight: bold;
+  }
+  
+  .sidebar img {
+    width: 50px;
+    height: auto;
+    padding-right: 10px;
+  }
+  
+  .sidebar a {
+    display: flex;
+    align-items: center;
+    padding: 10px 5px;
+    color: white;
+    text-decoration: none;
+    margin: 12px 0;
+  }
+  
+  .sidebar a.active {
+    background-color: var(--primary);
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .sidebar a.border {
+    border-bottom: 1px solid white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    text-decoration: none;
+  }
+  .content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+ /* Card grid layout */
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Add a grid wrapper inside .content */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 200px; /* spacing between cards */
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Card styling */
+  .card-container {
+    background-color: #f9b567;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    /* Glassmorphism Shine ✨ */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+      0 10px 20px rgba(0, 0, 0, 0.15);
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
