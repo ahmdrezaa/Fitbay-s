@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tambah Gym - Fitbay's</title>
+  <link rel="stylesheet" href="adminaddgym.css" />
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar">
+    <img src="Images/Logo.png" alt="Logo" />
+  </nav>
+
+  <main class="form-container">
+    <h2>Tambahkan Gym</h2>
+    <form action="/submit-gym" method="post" enctype="multipart/form-data">
+      <!-- Nama Gym -->
+      <label for="gymName">Nama Gym*</label>
+      <input type="text" id="gymName" name="gymName" required />
+
+      <!-- Lokasi Google Maps -->
+      <label for="mapsLink">Link Google Maps*</label>
+      <input type="url" id="mapsLink" name="mapsLink" placeholder="https://maps.google.com/..." required />
+
+      <!-- Alamat Lengkap -->
+      <label for="location">Alamat Lengkap*</label>
+      <textarea id="location" name="location" rows="3" placeholder="Masukkan alamat lengkap gym" required></textarea>
+
+      <!-- Gambar Header -->
+      <label for="headerImage">Gambar Header*</label>
+      <input type="file" id="headerImage" name="headerImage" accept="image/*" required />
+
+      <!-- Galeri -->
+      <label for="foto1">Foto 1:</label>
+<input type="file" id="foto1" name="galleryImage1" accept="image/*" required>
+
+<label for="foto2">Foto 2:</label>
+<input type="file" id="foto2" name="galleryImage2" accept="image/*" required>
+
+<label for="foto3">Foto 3:</label>
+<input type="file" id="foto3" name="galleryImage3" accept="image/*" required>
+
+      <!-- Fasilitas Unggulan -->
+      <label>6 Fasilitas Unggulan:</label>
+      <input type="text" name="fasilitas[]" placeholder="Fasilitas 1" required />
+      <input type="text" name="fasilitas[]" placeholder="Fasilitas 2" required />
+      <input type="text" name="fasilitas[]" placeholder="Fasilitas 3" required />
+      <input type="text" name="fasilitas[]" placeholder="Fasilitas 4" required />
+      <input type="text" name="fasilitas[]" placeholder="Fasilitas 5" required />
+      <input type="text" name="fasilitas[]" placeholder="Fasilitas 6" required />
+
+<!-- Harga Membership -->
+<label>Harga Membership (Opsional):</label>
+<div class="harga-input-container">
+  <input type="number" name="harga[1]" placeholder="1 Bulan (Rp)">
+  <input type="number" name="harga[3]" placeholder="3 Bulan (Rp)">
+  <input type="number" name="harga[6]" placeholder="6 Bulan (Rp)">
+  <input type="number" name="harga[12]" placeholder="12 Bulan (Rp)">
+  <input type="number" name="harga[24]" placeholder="24 Bulan (Rp)">
+</div>
+
+
+      <!-- Submit -->
+      <button type="submit">Simpan Gym</button>
+    </form>
+  </main>
+</body>
+</html>
