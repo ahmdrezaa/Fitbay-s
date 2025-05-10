@@ -71,7 +71,7 @@ body {
   min-height: 75vh;
   display: flex;
   align-items: center;
-  background-image: url("Lokasi.png");
+  background: url("Images/lokasi.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -108,23 +108,21 @@ body {
 
 .fotoloc {
   width: 100%;
-  max-height: 350px;
-  border-radius: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
-.fotoloc img {
+.fotoloc .gmap {
   width: 95%;
-  height: 300px;
+  height: 350px;
   border-radius: 20px;
-  object-fit: cover;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 
 body {
   font-family: Arial, sans-serif;
@@ -132,17 +130,6 @@ body {
   color: white;
   text-align: center;
   padding: 20px;
-}
-
-.Loc {
-  max-width: 1100px;
-  margin: auto;
-  justify-content: center;
-}
-
-.Loc h1 {
-  font-size: 24px;
-  font-weight: bold;
 }
 
 .Loc .buttons {
@@ -154,19 +141,65 @@ body {
 }
 
 .Loc .button {
-  width: 80px;
-  height: 30px;
-  background-color: gray;
+  padding: 8px 14px;
+  background-color: #f8b66b;
+  color: white;
   border-radius: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
 }
 
-.Loc .box {
-  width: 98%;
-  height: 80px;
-  background-color: lightgray;
-  margin: 10px auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
+.Loc .button:hover {
+  background-color: var(--primary);
+  color: black;
+}
+
+
+.gym-card {
+  width: 95%;
+  background-color: #f2f2f2;
+  color: #0a2c40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 15px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gym-info h3 {
+  margin: 0;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.gym-info p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.gym-btn {
+  background-color: #0a2c40;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gym-btn:hover {
+  background-color: var(--primary);
+  color: black;
 }
 
 .footer {
@@ -217,3 +250,7 @@ body {
   width: 100px;
   height: 90px;
 }
+
+
+
+
