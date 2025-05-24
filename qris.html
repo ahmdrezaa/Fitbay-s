@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembayaran QRIS - Fit'Bays</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../Image/Ellipse 1.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="qris.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-logo">
+        <img src="Image/Logo.png" alt="Fit'Bays Logo" />
+      </a>
+      <div class="navbar-nav">
+        <a href="Member.html">Member</a>
+        <a href="PT.html">Personal Trainer</a>
+        <a href="Location.html">Location</a>
+        <a href="Blog.html">Blog</a>
+        <a href="akun.html">Account</a>
+      </div>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="main-wrapper">
+      <div class="qris-container">
+        <h2>Pembayaran dengan QRIS</h2>
+        <p class="total">Total: <strong>Rp 150.000</strong></p>
+        <img src="Images/qris.jpg" alt="Kode QRIS" class="qris-img" />
+        <p class="instruction">
+          Scan kode QR ini menggunakan aplikasi e-wallet Anda.
+        </p>
+        <button onclick="konfirmasiPembayaran()">Saya Sudah Bayar</button>
+        <p id="status">Status: <span>Menunggu pembayaran...</span></p>
+      </div>
+    </main>
+
+    <script>
+      function konfirmasiPembayaran() {
+        document.getElementById("status").innerHTML =
+          "Status: <span class='success'>Pembayaran berhasil!</span>";
+        setTimeout(() => {
+          window.location.href = "PaymentSuccess.html";
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>

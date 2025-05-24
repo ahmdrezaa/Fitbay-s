@@ -1,0 +1,137 @@
+:root {
+  --primary: #f8b66b;
+  --bg: #010100;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 2%;
+  background-color: #010100;
+  border-bottom: 1px solid #010100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.navbar .navbar-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  margin-left: 58px;
+  white-space: nowrap;
+}
+
+.navbar .navbar-nav a {
+  color: white;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1.15rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+
+/* Main Content Wrapper */
+.main-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 40px;
+}
+
+/* QRIS Container */
+.qris-container {
+  max-width: 400px;
+  background-color: #111;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.qris-container h2 {
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.total {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #ccc;
+}
+
+.qris-img {
+  width: 240px;
+  height: auto;
+  border-radius: 10px;
+  margin: 16px 0;
+  border: 2px solid white;
+}
+
+.instruction {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: var(--primary);
+  color: black;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ffc880;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.success {
+  color: #00ff88;
+  font-weight: bold;
+}
